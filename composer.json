@@ -1,0 +1,27 @@
+{
+    "name": "demotivacija/smanjivac_plate",
+    "description": "Program namenjen smanjenju plate zaposlenih",
+    "type": "fun",
+    "require": {
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Demotivacija\\SmanjivacPlate\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Damnjan",
+            "email": "damnjanj@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
