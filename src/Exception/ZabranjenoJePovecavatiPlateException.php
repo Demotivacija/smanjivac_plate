@@ -10,15 +10,20 @@
  * =  Aj uzdravlje 🍻🍻                                                                =
  * =                                                                                  =
  * ====================================================================================
- *
- * Ako hoćeš da kontributuješ, gledaj ovamo! Svi razlozi moraju implementirati ovaj interfejs
- * da bi bili u upotrebi u Smanjivaču plate.
  */
-namespace Demotivacija\SmanjivacPlate\Razlozi;
+namespace Demotivacija\SmanjivacPlate\Exception;
 
-interface Razlog
+class ZabranjenoJePovecavatiPlateException extends \RuntimeException
 {
-    public function getRazlog(): string;
+    private const PORUKE = [
+        'Ne može to tako gazda, zaposleni se ne smeju navikavati na povišice',
+        'Šta će im više para, ionako ne bi znali šta sa tim da rade'
+    ];
 
-    public function getSmanjenjePlate(): float;
+    public static function throwZabranjenoJePovecavatiPlateException()
+    {
+        $message = self::PORUKE[array_rand(self::PORUKE)];
+
+        throw new self($message);
+    }
 }

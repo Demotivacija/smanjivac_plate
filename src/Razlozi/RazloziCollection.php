@@ -10,15 +10,39 @@
  * =  Aj uzdravlje 🍻🍻                                                                =
  * =                                                                                  =
  * ====================================================================================
- *
- * Ako hoćeš da kontributuješ, gledaj ovamo! Svi razlozi moraju implementirati ovaj interfejs
- * da bi bili u upotrebi u Smanjivaču plate.
  */
 namespace Demotivacija\SmanjivacPlate\Razlozi;
 
-interface Razlog
+class RazloziCollection implements \IteratorAggregate
 {
-    public function getRazlog(): string;
+    private $razlozi = [];
 
-    public function getSmanjenjePlate(): float;
+    public function getIterator() : RazloziIterator
+    {
+        return new RazloziIterator($this);
+    }
+
+    public function dajRazlog($position): ?Razlog
+    {
+        if (isset($this->razlozi[$position])) {
+            return $this->razlozi[$position];
+        }
+
+        return null;
+    }
+
+    public function count() : int
+    {
+        return count($this->razlozi);
+    }
+
+    public function dodajRazlog(Razlog $razlog)
+    {
+        $this->razlozi[] = $razlog;
+    }
+
+    public function dajNasumicnirazlog(): Razlog
+    {
+        return $this->razlozi[array_rand($this->razlozi)];
+    }
 }

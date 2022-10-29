@@ -10,15 +10,15 @@
  * =  Aj uzdravlje 🍻🍻                                                                =
  * =                                                                                  =
  * ====================================================================================
- *
- * Ako hoćeš da kontributuješ, gledaj ovamo! Svi razlozi moraju implementirati ovaj interfejs
- * da bi bili u upotrebi u Smanjivaču plate.
  */
-namespace Demotivacija\SmanjivacPlate\Razlozi;
+namespace Demotivacija\SmanjivacPlate\Exception;
 
-interface Razlog
+class IstaPlataException extends \RuntimeException
 {
-    public function getRazlog(): string;
+    private const PORUKA = 'Plata ne sme ostati ista, zaposleni se mogu navići na pare';
 
-    public function getSmanjenjePlate(): float;
+    public static function throwIstaPlataException()
+    {
+        throw new self(self::PORUKA);
+    }
 }
