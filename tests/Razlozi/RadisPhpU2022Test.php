@@ -10,10 +10,10 @@ class RadisPhpU2022Test extends TestCase
 {
     public function testGetters(): void
     {
-        $kasnjenje = new RadisPhpU2022();
+        $razlogPhp = new RadisPhpU2022();
 
-        $this->assertEquals('Radiš PHP u 2022. godini', $kasnjenje->getRazlog());
-        $this->assertEquals(0.5, $kasnjenje->getSmanjenjePlate());
-        $this->assertInstanceOf(Razlog::class, $kasnjenje);
+        $this->assertEquals('Radiš PHP u 2022. godini', $razlogPhp->getRazlog());
+        $this->assertEquals(0.5, $razlogPhp->getSmanjenjePlate());
+        $this->assertInstanceOf(Razlog::class, $razlogPhp);
     }
 }

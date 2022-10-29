@@ -15,7 +15,7 @@ declare(strict_types=1);
 
 namespace Demotivacija\SmanjivacPlate\Razlozi;
 
-class KasnjenjeNaDejli implements Razlog
+class RadisPhpU2022 implements Razlog
 {
     private const RAZLOG = 'Radiš PHP u 2022. godini';
 
