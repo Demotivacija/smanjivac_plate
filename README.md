@@ -17,7 +17,7 @@ Program namenjen smanjenju plate zaposlenih
 
 ### Kontribucija
 Ako hoćeš da kontributuješ, bez testova možeš samo da sediš i plačeš.
-Smanjivanje plata je umetnost kojom vladaju samo najiskusnij ihasleri i stoga očekujemo samo izvrsnost u kontribuciji
+Smanjivanje plata je umetnost kojom vladaju samo najiskusniji hasleri i stoga očekujemo samo izvrsnost u kontribuciji
 
 
 
