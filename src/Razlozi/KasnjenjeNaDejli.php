@@ -17,7 +17,7 @@ namespace Demotivacija\SmanjivacPlate\Razlozi;
 
 class KasnjenjeNaDejli implements Razlog
 {
-    private const RAZLOG = 'Zašnjenje na daily standup';
+    private const RAZLOG = 'Kašnjenje na daily standup';
 
     private const SMANJENJE = 0.3;
 
