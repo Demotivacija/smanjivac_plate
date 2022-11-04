@@ -12,7 +12,7 @@ class KasnjenjeNaDejliTest extends TestCase
     {
         $kasnjenje = new KasnjenjeNaDejli();
 
-        $this->assertEquals('Zašnjenje na daily standup', $kasnjenje->getRazlog());
+        $this->assertEquals('Kašnjenje na daily standup', $kasnjenje->getRazlog());
         $this->assertEquals(0.3, $kasnjenje->getSmanjenjePlate());
         $this->assertInstanceOf(Razlog::class, $kasnjenje);
     }
